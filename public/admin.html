@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Dữ liệu thu thập BMI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./admin.css" />
+</head>
+<body>
+  <main class="admin-page">
+    <header class="admin-header">
+      <div>
+        <p class="kicker">Quản trị dữ liệu</p>
+        <h1>Danh sách thông tin thu thập</h1>
+      </div>
+      <div class="header-actions">
+        <span id="adminUser" class="user-tag" hidden></span>
+        <a href="/" class="btn ghost">Về form</a>
+        <button id="refreshBtn" class="btn primary" type="button">Tải lại</button>
+        <button id="logoutBtn" class="btn danger" type="button">Đăng xuất</button>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="Tìm theo tên phụ huynh, tên bé, số điện thoại..." />
+      <div class="stats" id="stats">0 bản ghi</div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Thời gian</th>
+            <th>Phụ huynh</th>
+            <th>Số điện thoại</th>
+            <th>Trẻ</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Cao (cm)</th>
+            <th>Nặng (kg)</th>
+            <th>BMI</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <p id="emptyState" class="empty" hidden>Chưa có dữ liệu.</p>
+    </section>
+  </main>
+
+  <script src="./admin.js"></script>
+</body>
+</html>

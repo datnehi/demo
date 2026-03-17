@@ -1,0 +1,159 @@
+:root {
+  --bg: #edf4ff;
+  --text: #182538;
+  --blue: #18478f;
+  --border: #d7e3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 80% 0%, #dceaff 0%, transparent 30%),
+    radial-gradient(circle at 0% 100%, #e4f0ff 0%, transparent 35%),
+    var(--bg);
+}
+
+.admin-page {
+  width: min(1280px, 95vw);
+  margin: 24px auto 40px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-end;
+}
+
+.kicker {
+  margin: 0;
+  color: #5c7599;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 8px 0 0;
+  font-size: clamp(26px, 3.5vw, 42px);
+  color: var(--blue);
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: 0;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn.primary {
+  background: linear-gradient(120deg, #18478f, #2e67c5);
+  color: #fff;
+}
+
+.btn.ghost {
+  background: #fff;
+  color: var(--blue);
+  border: 1px solid #c8d8f4;
+}
+
+.btn.danger {
+  background: #fff;
+  color: #9b2b2b;
+  border: 1px solid #efc0c0;
+}
+
+.user-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #f7faff;
+  color: #35537a;
+  border: 1px solid #d7e3f8;
+  font-weight: 700;
+}
+
+.toolbar {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+#searchInput {
+  flex: 1;
+  height: 46px;
+  border-radius: 999px;
+  border: 1.6px solid #b7ccec;
+  padding: 0 16px;
+  font: inherit;
+}
+
+.stats {
+  white-space: nowrap;
+  color: #48688f;
+  font-weight: 700;
+}
+
+.table-wrap {
+  margin-top: 14px;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e9eef8;
+  font-size: 14px;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background: #f7faff;
+  color: #35537a;
+}
+
+.empty {
+  padding: 18px;
+  color: #55739b;
+}
+
+@media (max-width: 720px) {
+  .admin-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

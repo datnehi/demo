@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Thu thập BMI trẻ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <main class="page">
+        <a class="admin-link" href="/admin">Trang quản trị</a>
+        <section class="hero">
+            <div class="hero-image"></div>
+            <div class="panel">
+                <h1>KIỂM TRA CHỈ SỐ BMI<br />ONLINE CHO TRẺ</h1>
+
+                <form id="bmiForm" novalidate>
+                    <h2>Thông tin phụ huynh</h2>
+                    <div class="grid two">
+                        <input name="parentName" placeholder="Họ tên phụ huynh*" required />
+                        <input name="phone" placeholder="Số điện thoại*" required />
+                    </div>
+
+                    <h2>Thông tin của bé</h2>
+                    <div class="grid two">
+                        <input class="span-2" name="childName" placeholder="Họ tên bé*" required />
+                        <input name="age" type="number" min="0" max="18" placeholder="Tuổi của bé (năm)*" required />
+                        <select name="gender">
+                            <option value="Nu">Nữ</option>
+                            <option value="Nam">Nam</option>
+                        </select>
+                        <input name="heightCm" type="number" min="30" max="220" placeholder="Chiều cao của bé (cm)*"
+                            required />
+                        <input name="weightKg" type="number" min="1" max="200" placeholder="Cân nặng của bé (kg)*"
+                            required />
+                    </div>
+
+                    <div class="actions">
+                        <button type="submit">XEM KẾT QUẢ</button>
+                        <button type="reset" class="ghost">ĐẶT LẠI</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="result" id="resultCard" hidden>
+            <div class="result-grid">
+                <div class="result-left">
+                    <div class="score-box big">
+                        <p>Kết quả BMI của con bạn</p>
+                        <strong id="bmiValue">0</strong>
+                    </div>
+
+                    <div class="evaluation-card">
+                        <h4 id="adviceLabel">Đánh giá kết quả</h4>
+                        <p id="adviceText"></p>
+                    </div>
+                </div>
+
+                <div class="result-right">
+                    <div class="expert-body">
+                        <h2 class="expert-title">LỜI KHUYÊN TỪ CHUYÊN GIA</h2>
+                        <p id="recommendationText" class="recommendation-text"></p>
+                            <!-- image placeholder -->
+                            <div class="expert-image-wrap">
+                                <img src="./images/expert.jpg" alt="Sản phẩm Kun Doctor" class="expert-image">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

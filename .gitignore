@@ -1,0 +1,36 @@
+# Node dependencies
+node_modules/
+
+# Environment files (do NOT commit secrets)
+.env
+.env.local
+.env.*.local
+/.env.example
+
+# Admin session file (local only)
+/admin_cookie.txt
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Builds
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Coverage and cache
+coverage/
+.cache/
+
+# Optional: ignore images if you don't want them in git
+# public/images/

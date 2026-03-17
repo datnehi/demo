@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dang nhap admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+  <main class="login-page">
+    <section class="card">
+      <p class="kicker">Quyền Admin</p>
+      <h1>Đăng nhập trang quản trị</h1>
+      <form id="loginForm">
+        <label>
+          Tên đăng nhập
+          <input id="username" name="username" placeholder="Nhập tên đăng nhập" required />
+        </label>
+        <label>
+          Mật khẩu
+          <input id="password" type="password" name="password" placeholder="Nhập mật khẩu" required />
+        </label>
+        <button type="submit">Đăng nhập</button>
+      </form>
+      <p id="errorText" class="error" hidden></p>
+      <a href="/" class="back-link">Về trang form</a>
+    </section>
+  </main>
+  <script src="./login.js"></script>
+</body>
+</html>
